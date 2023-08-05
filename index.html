@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assessment 27-Jul</title>
+  </head>
+  <body>
+    <h1>Assessment 27-Jul | javaScript</h1>
+
+    <script>
+      // Write a program that takes two numbers as input and swaps their values using a third variable. Display the new values of both numbers after the swap
+
+      // solved
+      let a = parseFloat(prompt("Enter number 1"));
+      let b = parseFloat(prompt("Enter number 2"));
+      let c = a;
+      a = b;
+      b = c;
+      console.log(
+        `After swapping the value of number one is ${a} and number two is ${b}`
+      );
+
+      // Create a program that takes a user's age as input. If the age is between 13 and 19 (inclusive), display "You are a teenager." Otherwise, display "You are not a teenager."
+
+      // solved
+      let userAge = parseFloat(prompt("What is Your age :)"));
+      if (userAge >= 18) {
+        console.log("You are a Teenager");
+      } else {
+        console.log("You are not a teenager");
+      }
+
+      // Given three sides of a triangle (sideA, sideB, sideC), write a program that determines whether it's an equilateral, isosceles, or scalene triangle. Display the type of triangle based on the input.
+
+      // solved
+      let sideA = parseFloat(prompt("Enter side A"));
+      let sideB = parseFloat(prompt("Enter side B"));
+      let sideC = parseFloat(prompt("Enter side C"));
+
+      if (sideA == sideB && sideB == sideC && sideA == sideC) {
+        console.log(`The triangle of yours is a Equilateral`);
+      } else if (sideA == sideB || sideB == sideC || sideA == sideC) {
+        console.log(`The triangle of yours is a isosceles`);
+      } else {
+        console.log(`The triangle of yours is a scalene`);
+      }
+
+      // Create a function calculatePower that takes a base number and an exponent as arguments and calculates the result of base raised to the power of exponent(without using function).
+
+      // solved - need to clarify
+      let base = parseFloat(prompt("Enter a number"));
+      let exponent = parseFloat(prompt("Enter the exponent:"));
+      let result = Math.pow(base, exponent);
+      console.log("Result:", result);
+
+      // Write a program that prompts the user for a number and checks if it's even or odd. Display "Even" if the number is even, and "Odd" if it's odd.
+
+      // solved
+      let randomNumber = parseFloat(prompt("Enter a number please"));
+      if (randomNumber % 2 == 0) {
+        console.log("The number you selected is a EVEN number");
+      } else {
+        console.log("The number you selected is a ODD number");
+      }
+
+      // Create a program that takes a year as input and determines if it's a leap year or not. Display "Leap year" if it's a leap year, otherwise "Not a leap year."
+
+      // solved
+      let userYear = parseFloat(prompt("Enter a Year"));
+      if (userYear % 4 == 0) {
+        console.log("Leap Year");
+      } else {
+        console.log("Not a Leap Year");
+      }
+
+      // Write a program that takes the length of three sides of a triangle as input and determines whether it forms a valid triangle. A valid triangle must satisfy the triangle inequality theorem: the sum of the lengths of any two sides must be greater than the length of the third side.
+
+      // solved
+      let sideA = parseFloat(prompt("Enter the length of side A:"));
+      let sideB = parseFloat(prompt("Enter the length of side B:"));
+      let sideC = parseFloat(prompt("Enter the length of side C:"));
+      if (
+        sideA + sideB > sideC &&
+        sideA + sideC > sideB &&
+        sideB + sideC > sideA
+      ) {
+        console.log("Valid triangle");
+      } else {
+        console.log("Not a valid triangle");
+      }
+
+      // Create a function calculateFactorial that takes a positive integer as an argument and returns its factorial value
+
+      // solved
+      let n = parseInt(prompt("Enter a positive integer:"));
+      let factorial = 1;
+      for (let i = 1; i <= n; i++) {
+        factorial *= i;
+      }
+      console.log("Factorial:", factorial);
+
+      // Given a string, write a program that checks if it's a palindrome. Ignore spaces and punctuation while considering palindromes. Return true if it's a palindrome, otherwise false.
+
+      // solved
+      let inputString = prompt("Enter a string:");
+      inputString = inputString.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+      if (inputString === inputString.split("").reverse().join("")) {
+        console.log("Palindrome");
+      } else {
+        console.log("Not a palindrome");
+      }
+
+      // Write a program that takes a user's age as input. If the age is less than 12, display "You are a child." If the age is between 12 and 19 (inclusive), display "You are a teenager." If the age is 20 or older, display "You are an adult."
+
+      // solved
+      let age = parseInt(prompt("Enter your age:"));
+      if (age < 12) {
+        console.log("You are a child.");
+      } else if (age >= 12 && age <= 19) {
+        console.log("You are a teenager.");
+      } else if (age >= 20) {
+        console.log("You are an adult.");
+      }
+    </script>
+  </body>
+</html>
